@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Means Clustering Web App</title>
+</head>
+<body>
+    <h1>K-Means Clustering Web Application</h1>
+    <form action="/cluster" method="post">
+        <label for="n_clusters">Number of Clusters:</label>
+        <input type="number" id="n_clusters" name="n_clusters" min="1" value="3" required>
+        <br><br>
+        <label for="data_points">Data Points (comma-separated x,y pairs, semicolon between points):</label>
+        <input type="text" id="data_points" name="data_points" value="1,1;2,2;3,3;8,8;9,9;10,10" required>
+        <br><br>
+        <button type="submit">Perform Clustering</button>
+    </form>
+    <br>
+    <h3>Result:</h3>
+    <img src="/cluster" alt="K-Means Clustering Result">
+</body>
+</html>
